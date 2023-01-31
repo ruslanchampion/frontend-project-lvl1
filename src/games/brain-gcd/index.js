@@ -1,1 +1,1 @@
-export { brainGCD } from "./brain-gcd.js"
+export { brainGCD } from './brain-gcd.js';

@@ -1,14 +1,14 @@
-import { getRandomNumber } from "../../helpers/getRandomNumber.js"
-import { getGCD } from "./getGCD.js"
+import { getRandomNumber } from '../../helpers/getRandomNumber.js';
+import { getGCD } from './getGCD.js';
 
-const MAX_NUMBER = 101
+const MAX_NUMBER = 101;
 
 export function getQA() {
-  const firstNumber = getRandomNumber(MAX_NUMBER)
-  const secondNumber = getRandomNumber(MAX_NUMBER)
+  const firstNumber = getRandomNumber(MAX_NUMBER);
+  const secondNumber = getRandomNumber(MAX_NUMBER);
 
   return {
     gameQuestion: `${firstNumber} ${secondNumber}`,
     gameAnswer: getGCD(firstNumber, secondNumber),
-  }
+  };
 }

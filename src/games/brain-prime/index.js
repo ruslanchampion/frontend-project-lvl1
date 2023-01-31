@@ -1,1 +1,1 @@
-export { brainPrime } from "./brain-prime.js"
+export { brainPrime } from './brain-prime.js';

@@ -1,1 +1,1 @@
-export { brainEven } from "./brain-even.js"
+export { brainEven } from './brain-even.js';

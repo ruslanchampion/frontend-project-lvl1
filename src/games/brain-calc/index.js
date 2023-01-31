@@ -1,1 +1,1 @@
-export { brainCalc } from "./brain-calc.js"
+export { brainCalc } from './brain-calc.js';

@@ -1,1 +1,1 @@
-export { brainProgression } from "./brain-progression.js"
+export { brainProgression } from './brain-progression.js';
