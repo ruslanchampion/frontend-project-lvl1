@@ -19,11 +19,12 @@ export function getQA() {
     .map((item, index) => item + (index + 1) * key)
 
   const randomNumberOfArray = getRandomNumber(baseArray.length)
+  const gameQuestion = baseArray
+    .map((item, ind) => (ind === randomNumberOfArray ? SYMBOL : item))
+    .join(" ")
 
   return {
-    gameQuestion: baseArray.map((item, ind) =>
-      ind === randomNumberOfArray ? SYMBOL : item
-    ),
+    gameQuestion,
     gameAnswer: baseArray[randomNumberOfArray],
   }
 }
