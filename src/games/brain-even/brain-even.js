@@ -1,8 +1,8 @@
+import { brainGame } from "../../index.js"
 import { getQA } from "./getQA.js"
 
-const gameRules = "Answer 'yes' if the number is even, otherwise answer 'no'."
+export function brainEven() {
+  const gameRules = "Answer 'yes' if the number is even, otherwise answer 'no'."
 
-export default {
-  gameRules,
-  getQA,
+  brainGame(gameRules, getQA)
 }

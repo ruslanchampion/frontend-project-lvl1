@@ -6,12 +6,12 @@ const STEPS = {
   max: 3,
 }
 
-export function brainGame({ gameRules, getQA }) {
+export function brainGame(rules, question) {
   const name = sayHello()
-  console.log(gameRules)
+  console.log(rules)
 
   while (STEPS.count < STEPS.max) {
-    const { gameQuestion, gameAnswer } = getQA()
+    const { gameQuestion, gameAnswer } = question()
 
     console.log(`Question: ${gameQuestion}`)
     const userAnswer = readlineSync.question("Your answer: ")
