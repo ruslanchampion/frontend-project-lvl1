@@ -1,12 +1,12 @@
 import readlineSync from 'readline-sync';
-import { sayHello } from './cli.js';
+import sayHello from './cli.js';
 
 const STEPS = {
   count: 0,
   max: 3,
 };
 
-export function brainGame(rules, question) {
+export default function brainGame(rules, question) {
   const name = sayHello();
   console.log(rules);
 
@@ -15,7 +15,7 @@ export function brainGame(rules, question) {
 
     console.log(`Question: ${gameQuestion}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    const isCorrect = userAnswer == gameAnswer;
+    const isCorrect = userAnswer === String(gameAnswer);
 
     if (isCorrect) {
       console.log('Correct!');
@@ -28,5 +28,7 @@ export function brainGame(rules, question) {
     }
   }
 
-  STEPS.count === 3 && console.log(`Congratulations, ${name}!`);
+  if (STEPS.count === 3) {
+    console.log(`Congratulations, ${name}!`);
+  }
 }

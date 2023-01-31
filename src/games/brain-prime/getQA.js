@@ -1,9 +1,9 @@
-import { getRandomNumber } from '../../helpers/getRandomNumber.js';
-import { isPrime } from './isPrime.js';
+import getRandomNumber from '../../helpers/getRandomNumber.js';
+import isPrime from './isPrime.js';
 
 const MAX_NUMBER = 1000;
 
-export function getQA() {
+export default function getQA() {
   const randomNumber = getRandomNumber(MAX_NUMBER);
 
   return {

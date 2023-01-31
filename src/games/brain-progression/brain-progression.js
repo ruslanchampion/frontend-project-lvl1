@@ -1,7 +1,7 @@
-import { brainGame } from '../../index.js';
-import { getQA } from './getQA.js';
+import brainGame from '../../index.js';
+import getQA from './getQA.js';
 
-export function brainProgression() {
+export default function brainProgression() {
   const rule = 'What number is missing in the progression?';
   brainGame(rule, getQA);
 }

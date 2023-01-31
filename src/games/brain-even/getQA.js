@@ -1,8 +1,8 @@
-import { getRandomNumber } from '../../helpers/getRandomNumber.js';
+import getRandomNumber from '../../helpers/getRandomNumber.js';
 
 const MAX_NUMBER = 100;
 
-export function getQA() {
+export default function getQA() {
   const randomNumber = getRandomNumber(MAX_NUMBER);
 
   return {

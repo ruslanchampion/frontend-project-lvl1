@@ -1,9 +1,9 @@
-import { getRandomNumber } from '../../helpers/getRandomNumber.js';
+import getRandomNumber from '../../helpers/getRandomNumber.js';
 
 const MAX_NUMBER = 10;
 const OPERATIONS = ['+', '-', '*'];
 
-export function getQA() {
+export default function getQA() {
   const firstNumber = getRandomNumber(MAX_NUMBER);
   const secondNumber = getRandomNumber(MAX_NUMBER);
   const operation = OPERATIONS[getRandomNumber(OPERATIONS.length)];
@@ -18,6 +18,8 @@ export function getQA() {
       break;
     case '*':
       gameAnswer = firstNumber * secondNumber;
+      break;
+    default:
       break;
   }
 

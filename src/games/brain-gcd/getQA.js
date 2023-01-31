@@ -1,9 +1,9 @@
-import { getRandomNumber } from '../../helpers/getRandomNumber.js';
-import { getGCD } from './getGCD.js';
+import getRandomNumber from '../../helpers/getRandomNumber.js';
+import getGCD from './getGCD.js';
 
 const MAX_NUMBER = 101;
 
-export function getQA() {
+export default function getQA() {
   const firstNumber = getRandomNumber(MAX_NUMBER);
   const secondNumber = getRandomNumber(MAX_NUMBER);
 
