@@ -29,7 +29,7 @@ function getQuestionAndAnswer() {
   }
 
   return {
-    gameQuestion: baseArray,
+    gameQuestion: baseArray.join(" "),
     gameAnswer: String(answer),
   };
 }
