@@ -3,10 +3,8 @@ import getRandomNumber from '../../helpers/getRandomNumber.js';
 
 const MAX_NUMBER = 100;
 
-export default function runBrainEven() {
-  const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
-
-  brainGame(gameRules, getQuestionAndAnswer);
+function isEven(num) {
+  return num % 2 === 0;
 }
 
 function getQuestionAndAnswer() {
@@ -18,6 +16,8 @@ function getQuestionAndAnswer() {
   };
 }
 
-function isEven(num){
-  return num % 2 === 0
+export default function runBrainEven() {
+  const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+  brainGame(gameRules, getQuestionAndAnswer);
 }

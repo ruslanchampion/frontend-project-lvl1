@@ -4,10 +4,17 @@ import getRandomNumber from '../../helpers/getRandomNumber.js';
 const MAX_NUMBER = 10;
 const OPERATIONS = ['+', '-', '*'];
 
-export default function runBrainCalc() {
-  const gameRule = 'What is the result of the expression?';
-
-  brainGame(gameRule, getQuestionAndAnswer);
+function getAnswer(operation, firstNumber, secondNumber) {
+  switch (operation) {
+    case '+':
+      return firstNumber + secondNumber;
+    case '-':
+      return firstNumber - secondNumber;
+    case '*':
+      return firstNumber * secondNumber;
+    default:
+      return firstNumber * secondNumber;
+  }
 }
 
 function getQuestionAndAnswer() {
@@ -21,13 +28,8 @@ function getQuestionAndAnswer() {
   };
 }
 
-function getAnswer(operation, firstNumber, secondNumber) {
-  switch (operation) {
-    case '+':
-      return firstNumber + secondNumber;
-    case '-':
-      return firstNumber - secondNumber;
-    case '*':
-      return firstNumber * secondNumber;
-  }
+export default function runBrainCalc() {
+  const gameRule = 'What is the result of the expression?';
+
+  brainGame(gameRule, getQuestionAndAnswer);
 }

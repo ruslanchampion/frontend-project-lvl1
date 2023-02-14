@@ -3,9 +3,8 @@ import getRandomNumber from '../../helpers/getRandomNumber.js';
 
 const MAX_NUMBER = 101;
 
-export default function runBrainGCD() {
-  const gameRule = 'Find the greatest common divisor of given numbers.';
-  brainGame(gameRule, getQuestionAndAnswer);
+function getGCD(x, y) {
+  return !y ? x : getGCD(y, x % y);
 }
 
 function getQuestionAndAnswer() {
@@ -18,6 +17,7 @@ function getQuestionAndAnswer() {
   };
 }
 
-function getGCD(x, y) {
-  return !y ? x : getGCD(y, x % y);
+export default function runBrainGCD() {
+  const gameRule = 'Find the greatest common divisor of given numbers.';
+  brainGame(gameRule, getQuestionAndAnswer);
 }
