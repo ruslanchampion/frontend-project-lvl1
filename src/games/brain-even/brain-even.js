@@ -1,8 +1,23 @@
 import brainGame from '../../index.js';
-import getQA from './getQA.js';
+import getRandomNumber from '../../helpers/getRandomNumber.js';
 
-export default function brainEven() {
+const MAX_NUMBER = 100;
+
+export default function runBrainEven() {
   const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  brainGame(gameRules, getQA);
+  brainGame(gameRules, getQuestionAndAnswer);
+}
+
+function getQuestionAndAnswer() {
+  const randomNumber = getRandomNumber(MAX_NUMBER);
+
+  return {
+    gameQuestion: randomNumber,
+    gameAnswer: isEven(randomNumber) ? 'yes' : 'no',
+  };
+}
+
+function isEven(num){
+  return num % 2 === 0
 }

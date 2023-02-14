@@ -1,17 +1,22 @@
 import readlineSync from 'readline-sync';
-import sayHello from './cli.js';
 
-const STEPS = {
-  count: 0,
-  max: 3,
-};
+const MAX_STEPS = 3;
 
-export default function brainGame(rules, question) {
-  const name = sayHello();
+export default function brainGame(rules, getQuestionAndAnswer) {
+  let currentStep = 0;
+
+  console.log('Welcome to the Brain Games!');
+
+  console.log('May I have your name?');
+
+  const name = readlineSync.question('Your answer: ');
+
+  console.log(`Hello, ${name}!`);
+
   console.log(rules);
 
-  while (STEPS.count < STEPS.max) {
-    const { gameQuestion, gameAnswer } = question();
+  while (currentStep < MAX_STEPS) {
+    const { gameQuestion, gameAnswer } = getQuestionAndAnswer();
 
     console.log(`Question: ${gameQuestion}`);
     const userAnswer = readlineSync.question('Your answer: ');
@@ -19,7 +24,7 @@ export default function brainGame(rules, question) {
 
     if (isCorrect) {
       console.log('Correct!');
-      STEPS.count += 1;
+      currentStep += 1;
     } else {
       console.log(
         `${userAnswer} is wrong answer ;(. Correct answer was ${gameAnswer}. \n Let's try again, ${name}!`,
@@ -28,7 +33,5 @@ export default function brainGame(rules, question) {
     }
   }
 
-  if (STEPS.count === 3) {
-    console.log(`Congratulations, ${name}!`);
-  }
+  console.log(`Congratulations, ${name}!`);
 }

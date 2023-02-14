@@ -1,7 +1,19 @@
 import brainGame from '../../index.js';
-import getQA from './getQA.js';
+import getRandomNumber from '../../helpers/getRandomNumber.js';
+import isPrime from './isPrime.js';
 
-export default function brainPrime() {
+const MAX_NUMBER = 1000;
+
+export default function runBrainPrime() {
   const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  brainGame(gameRule, getQA);
+  brainGame(gameRule, getQuestionAndAnswer);
+}
+
+function getQuestionAndAnswer() {
+  const randomNumber = getRandomNumber(MAX_NUMBER);
+
+  return {
+    gameQuestion: randomNumber,
+    gameAnswer: isPrime(randomNumber) ? 'yes' : 'no',
+  };
 }
