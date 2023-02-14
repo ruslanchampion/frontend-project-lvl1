@@ -26,4 +26,5 @@
 [![Actions Status](https://github.com/ruslanchampion/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/ruslanchampion/frontend-project-lvl1/actions)
 
 **Codeclimate:**
+
 [![Maintainability](https://api.codeclimate.com/v1/badges/a7f857a59e402ea37aa7/maintainability)](https://codeclimate.com/github/ruslanchampion/frontend-project-lvl1/maintainability)
