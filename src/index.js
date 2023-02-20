@@ -1,9 +1,9 @@
 import readlineSync from 'readline-sync';
 
-const MAX_STEPS = 3;
+const MAX_ROUNDS = 3;
 
 export default function brainGame(rule, getQuestionAndAnswer) {
-  let currentStep = 0;
+  let roundsCount = 0;
 
   console.log('Welcome to the Brain Games!');
 
@@ -15,7 +15,7 @@ export default function brainGame(rule, getQuestionAndAnswer) {
 
   console.log(rule);
 
-  while (currentStep < MAX_STEPS) {
+  while (roundsCount < MAX_ROUNDS) {
     const { gameQuestion, gameAnswer } = getQuestionAndAnswer();
 
     console.log(`Question: ${gameQuestion}`);
@@ -24,7 +24,7 @@ export default function brainGame(rule, getQuestionAndAnswer) {
 
     if (isCorrect) {
       console.log('Correct!');
-      currentStep += 1;
+      roundsCount += 1;
     } else {
       console.log(
         `${userAnswer} is wrong answer ;(. Correct answer was ${gameAnswer}. \n Let's try again, ${name}!`,

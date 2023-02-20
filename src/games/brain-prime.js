@@ -1,5 +1,5 @@
-import brainGame from "../index.js";
-import getRandomNumber from "../helpers/getRandomNumber.js";
+import brainGame from '../index.js';
+import getRandomNumber from '../helpers/getRandomNumber.js';
 
 const MAX_NUMBER = 1000;
 
@@ -17,12 +17,11 @@ function getQuestionAndAnswer() {
 
   return {
     gameQuestion: randomNumber,
-    gameAnswer: isPrime(randomNumber) ? "yes" : "no",
+    gameAnswer: isPrime(randomNumber) ? 'yes' : 'no',
   };
 }
 
 export default function runBrainPrime() {
-  const gameRule =
-    'Answer "yes" if given number is prime. Otherwise answer "no".';
+  const gameRule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   brainGame(gameRule, getQuestionAndAnswer);
 }
