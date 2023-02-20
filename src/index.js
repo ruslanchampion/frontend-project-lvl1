@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const MAX_STEPS = 3;
 
-export default function brainGame(rules, getQuestionAndAnswer) {
+export default function brainGame(rule, getQuestionAndAnswer) {
   let currentStep = 0;
 
   console.log('Welcome to the Brain Games!');
@@ -13,7 +13,7 @@ export default function brainGame(rules, getQuestionAndAnswer) {
 
   console.log(`Hello, ${name}!`);
 
-  console.log(rules);
+  console.log(rule);
 
   while (currentStep < MAX_STEPS) {
     const { gameQuestion, gameAnswer } = getQuestionAndAnswer();

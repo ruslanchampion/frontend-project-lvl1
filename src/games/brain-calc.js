@@ -1,5 +1,5 @@
-import brainGame from '../../index.js';
-import getRandomNumber from '../../helpers/getRandomNumber.js';
+import brainGame from '../index.js';
+import getRandomNumber from '../helpers/getRandomNumber.js';
 
 const MAX_NUMBER = 10;
 const OPERATIONS = ['+', '-', '*'];
